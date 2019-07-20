@@ -10,11 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/gautamr2/lpx-react.git"
   },
-  "keywords": ["react", "components"],
+  "keywords": [
+    "react",
+    "components"
+  ],
   "author": "Gautam",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gautamr2/lpx-react/issues"
   },
-  "homepage": "https://github.com/gautamr2/lpx-react#readme"
+  "homepage": "https://github.com/gautamr2/lpx-react#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  }
 }
