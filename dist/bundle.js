@@ -1,5 +1,7 @@
+'use strict'
+
 console.log('Helo' + 'world' + 'Meow')
 
 const dude = () => {}
 
-// export default dude
+module.exports = dude
