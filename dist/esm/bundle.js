@@ -1,1 +1,1 @@
-import e from"react";export default function(t){return e.createElement("h1",null,t)}
+import e from"react";var l=function(){return e.createElement(e.Fragment,null,e.createElement("div",{className:"lds-ellipsis"},e.createElement("div",null),e.createElement("div",null),e.createElement("div",null),e.createElement("div",null)))};export{l as Ellipsis};

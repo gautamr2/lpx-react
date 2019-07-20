@@ -1,5 +1,2 @@
-import React from 'react'
-
-const Spinner = props => <h1>{props}</h1>
-
-export default Spinner
+import './components/ellipsis/style.scss'
+export { Ellipsis } from './components/ellipsis/Ellipsis'
