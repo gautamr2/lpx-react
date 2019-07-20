@@ -1,5 +1,5 @@
-console.log('Helo' + 'world' + 'Meow')
+import React from 'react'
 
-const dude = () => {}
+const Spinner = props => <h1>{props}</h1>
 
-// export default dude
+export default Spinner

@@ -1,5 +1,11 @@
-'use strict'
+'use strict';
 
-console.log('Helo' + 'world' + 'Meow')
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-// export default dude
+var React = _interopDefault(require('react'));
+
+var Spinner = function Spinner(props) {
+  return React.createElement("h1", null, props);
+};
+
+module.exports = Spinner;

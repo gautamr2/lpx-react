@@ -1,3 +1,7 @@
-console.log('Helo' + 'world' + 'Meow')
+import React from 'react';
 
-// export default dude
+var Spinner = function Spinner(props) {
+  return React.createElement("h1", null, props);
+};
+
+export default Spinner;
