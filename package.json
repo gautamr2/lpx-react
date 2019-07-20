@@ -8,6 +8,12 @@
     "lint:fix": "prettier-eslint '**/*.js' --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gautamr2/lpx-react.git"
