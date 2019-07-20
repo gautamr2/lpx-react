@@ -1,11 +1,1 @@
-'use strict';
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
-
-var Spinner = function Spinner(props) {
-  return React.createElement("h1", null, props);
-};
-
-module.exports = Spinner;
+"use strict";function _interopDefault(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var React=_interopDefault(require("react")),Spinner=function(e){return React.createElement("h1",null,e)};module.exports=Spinner;

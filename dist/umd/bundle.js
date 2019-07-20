@@ -1,15 +1,1 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react')) :
-	typeof define === 'function' && define.amd ? define(['react'], factory) :
-	(global = global || self, global.Lpx = factory(global.React));
-}(this, function (React) { 'use strict';
-
-	React = React && React.hasOwnProperty('default') ? React['default'] : React;
-
-	var Spinner = function Spinner(props) {
-	  return React.createElement("h1", null, props);
-	};
-
-	return Spinner;
-
-}));
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t(require("react")):"function"==typeof define&&define.amd?define(["react"],t):(e=e||self).Lpx=t(e.React)}(this,function(e){"use strict";e=e&&e.hasOwnProperty("default")?e.default:e;return function(t){return e.createElement("h1",null,t)}});

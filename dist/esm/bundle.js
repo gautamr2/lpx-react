@@ -1,7 +1,1 @@
-import React from 'react';
-
-var Spinner = function Spinner(props) {
-  return React.createElement("h1", null, props);
-};
-
-export default Spinner;
+import e from"react";export default function(t){return e.createElement("h1",null,t)}
