@@ -15,7 +15,9 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "test:staged": "jest --findRelatedTests"
+    "test:staged": "jest --findRelatedTests",
+    "predeploy": "yarn storybook:build",
+    "deploy": "gh-pages -d storybook-static"
   },
   "lint-staged": {
     "*.js": [
@@ -56,6 +58,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^2.0.1",
     "husky": "^3.0.1",
     "jest": "^24.8.0",
     "lint-staged": "^9.2.0",
