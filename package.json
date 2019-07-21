@@ -1,6 +1,6 @@
 {
   "name": "lpx-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component library",
   "main": "index.js",
   "sideEffects": false,
@@ -8,11 +8,11 @@
     "dist"
   ],
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c storybook",
-    "storybook:build": "build-storybook -c storybook",
-    "clean": "rimraf dist",
     "prebuild": "yarn clean",
     "build": "rollup -c",
+    "clean": "rimraf dist",
+    "storybook": "start-storybook -p 9001 -c storybook",
+    "storybook:build": "build-storybook -c storybook",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write",
     "test": "jest",

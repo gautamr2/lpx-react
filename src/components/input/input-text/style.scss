@@ -1,0 +1,10 @@
+@import "../../../styles/variables.scss";
+
+.lpx-input {
+  display: inline-block;
+
+  input {
+    border: none;
+    border-bottom: 1px solid $brand-color;
+  }
+}
