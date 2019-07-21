@@ -13,11 +13,13 @@
     "lint:fix": "prettier-eslint '**/*.js' --write",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:staged": "jest --findRelatedTests"
   },
   "lint-staged": {
     "*.js": [
       "yarn lint:fix",
+      "yarn test:staged",
       "git add"
     ]
   },
