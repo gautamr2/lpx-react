@@ -1,6 +1,7 @@
 import './style.scss'
 
 export { Button } from './components/buttons/button/Button'
+export { Checkbox } from './components/input/checkbox/Checkbox'
 export { Submit } from './components/buttons/submit/Submit'
 export { Form, Verify } from './components/forms/Form'
 export { Icon } from './components/icon/Icon'

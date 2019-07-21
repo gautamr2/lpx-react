@@ -24,12 +24,10 @@ export const Form = ({ children, onSubmit }) => (
 
 export const Verify = () => {
   const {
-    value: valueFirstName,
     bind: bindFirstName,
     reset: resetFirstName
   } = useInput('')
   const {
-    value: valueLastName,
     bind: bindLastName,
     reset: resetLastName
   } = useInput('')
@@ -47,17 +45,17 @@ export const Verify = () => {
       <Input
         name="firstName"
         id="firstName"
-        placeholder="Enter First Name"
-        {...bindFirstName}
+        placeholder="Enter first name"
         required
+        {...bindFirstName}
       />
       <br />
       <Input
         name="lastName"
         id="lastName"
-        placeholder="Enter Last Name"
-        {...bindLastName}
+        placeholder="Enter last name"
         required
+        {...bindLastName}
       />
       <br />
       <Submit disabled={isButtonDisabled} />

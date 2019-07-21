@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 import {
   Button,
+  Checkbox,
   Ellipsis,
   Input,
   Roller,
@@ -15,14 +16,17 @@ storiesOf('Loaders', module)
   .add('Spinner', () => <Spinner />)
   .add('Roller', () => <Roller />)
 
-storiesOf('Input', module).add('Input', () => (
-  <Input
-    name="name"
-    placeholder="Enter your name"
-    id="name"
-    onChange={() => {}}
-  />
-))
+storiesOf('Input', module)
+  .add('Input', () => (
+    <Input
+      name="name"
+      placeholder="Enter your name"
+      id="name"
+      onChange={() => {}}
+    />
+  ))
+  .add('Checkbox', () => <Checkbox label="One" />)
+
 storiesOf('Forms', module).add('Forms', () => <Verify />)
 storiesOf('Buttons', module)
   .add('Button', () => (

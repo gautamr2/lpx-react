@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+.lpx-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid $brand-color;
+    border-radius: 3px;
+    background-color: #fff;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 0px;
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover {
+    input {
+      ~ .checkmark {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+/* When the checkbox is checked, add a blue background */
+.lpx-checkbox input:checked ~ .checkmark {
+  background-color: $brand-color;
+}
+
+/* Show the checkmark when checked */
+.lpx-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
