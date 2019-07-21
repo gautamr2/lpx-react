@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A React component library",
   "main": "index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:build": "build-storybook -c storybook",
@@ -17,13 +21,13 @@
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:staged": "jest --findRelatedTests",
     "predeploy": "yarn storybook:build",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static",
+    "prepublish": "yarn build"
   },
   "lint-staged": {
     "*.js": [
       "yarn lint:fix",
       "yarn test:staged",
-      "npm install",
       "git add"
     ]
   },
