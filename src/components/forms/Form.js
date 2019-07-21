@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Input } from '../..'
+import { Input, Submit } from '../..'
 import './style.scss'
 
 export const useInput = initialValue => {
@@ -18,8 +18,6 @@ export const useInput = initialValue => {
   }
 }
 
-export const Submit = () => <button type="submit" value="Submit" />
-
 export const Form = ({ children, onSubmit }) => (
   <form onSubmit={onSubmit}>{children}</form>
 )
@@ -29,17 +27,19 @@ export const Verify = () => {
     value: valueFirstName,
     bind: bindFirstName,
     reset: resetFirstName
-  } = useInput()
+  } = useInput('')
   const {
     value: valueLastName,
     bind: bindLastName,
     reset: resetLastName
-  } = useInput(null)
+  } = useInput('')
+  const [isButtonDisabled, setButtonState] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault()
     resetFirstName()
     resetLastName()
+    setButtonState(true)
   }
 
   return (
@@ -49,6 +49,7 @@ export const Verify = () => {
         id="firstName"
         placeholder="Enter First Name"
         {...bindFirstName}
+        required
       />
       <br />
       <Input
@@ -56,9 +57,10 @@ export const Verify = () => {
         id="lastName"
         placeholder="Enter Last Name"
         {...bindLastName}
+        required
       />
       <br />
-      <Submit />
+      <Submit disabled={isButtonDisabled} />
     </Form>
   )
 }

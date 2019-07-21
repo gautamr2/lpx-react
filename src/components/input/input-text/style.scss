@@ -2,7 +2,7 @@
 
 .lpx-input {
   position: relative;
-  width: 200px;
+  width: $form-fields-width;
   height: 44px;
   line-height: 44px;
 
@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     color: #888;
-    transition: 0.2s all;
+    transition: 0.1s all ease-in;
     cursor: text;
   }
 }

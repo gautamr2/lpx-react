@@ -7,11 +7,9 @@ export const Input = ({
   value = '',
   onChange,
   placeholder = '',
-  icon = 'fa-user-o',
-  required
+  required = true
 }) => (
-  <div class="lpx-input">
-    {/* <Icon name={icon} /> */}
+  <div className="lpx-input">
     <input
       type={type}
       name={name}
@@ -20,6 +18,6 @@ export const Input = ({
       onChange={onChange}
       required={required}
     />
-    <label for={name}>{placeholder}</label>
+    <label htmlFor={name}>{placeholder}</label>
   </div>
 )

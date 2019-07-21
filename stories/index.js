@@ -1,6 +1,14 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
-import { Ellipsis, Input, Roller, Spinner, Verify } from '../src/index'
+import {
+  Button,
+  Ellipsis,
+  Input,
+  Roller,
+  Spinner,
+  Submit,
+  Verify
+} from '../src/index'
 
 storiesOf('Loaders', module)
   .add('Ellipsis', () => <Ellipsis />)
@@ -8,6 +16,30 @@ storiesOf('Loaders', module)
   .add('Roller', () => <Roller />)
 
 storiesOf('Input', module).add('Input', () => (
-  <Input name="name" placeholder="Enter your name" id="name" />
+  <Input
+    name="name"
+    placeholder="Enter your name"
+    id="name"
+    onChange={() => {}}
+  />
 ))
-storiesOf('Verify', module).add('Verify', () => <Verify />)
+storiesOf('Forms', module).add('Forms', () => <Verify />)
+storiesOf('Buttons', module)
+  .add('Button', () => (
+    <Button
+      text="Reset"
+      onClick={() => {
+        console.log('Hello')
+      }}
+    />
+  ))
+  .add('Button props{small}', () => (
+    <Button
+      varient="small"
+      text="Reset"
+      onClick={() => {
+        console.log('Hello')
+      }}
+    />
+  ))
+  .add('Submit', () => <Submit />)
