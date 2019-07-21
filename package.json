@@ -11,7 +11,9 @@
     "build": "rollup -c",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "lint-staged": {
     "*.js": [
@@ -39,16 +41,19 @@
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^5.1.9",
     "autoprefixer": "^9.6.1",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.12.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^3.0.1",
+    "jest": "^24.8.0",
     "lint-staged": "^9.2.0",
     "node-sass": "^4.12.0",
     "postcss": "^7.0.17",
@@ -56,6 +61,7 @@
     "prettier-eslint-cli": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.3",
     "rollup": "^1.17.0",
     "rollup-plugin-babel": "^4.3.3",
@@ -69,5 +75,11 @@
   },
   "peerDependencies": {
     "react": "^16.8.6"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/mocks/styles.js"
+    }
   }
 }
