@@ -4,12 +4,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/gautamr2/lpx-react/badge.svg?branch=master)](https://coveralls.io/github/gautamr2/lpx-react?branch=master)
 [![npm version](https://badge.fury.io/js/lpx-react.svg)](https://badge.fury.io/js/lpx-react)
 
-
 A React component library
 
 ## Demo
 
-Browse components and explore their props with [Storybook](https://alex996.github.io/react-css-spinners).
+Browse components and explore their props with [Storybook](https://gautamr2.github.io/lpx-react).
 
 ## Quick Start
 
@@ -28,15 +27,13 @@ yarn add lpx-react
 Import any spinner you like
 
 ```js
-import { Ellipsis } from 'lpx-react'
+import { Ellipsis } from "lpx-react";
 ```
 
 and then it's business as usual
 
 ```js
-const Loader = props => (
-  <Ellipsis />
-)
+const Loader = props => <Ellipsis />;
 ```
 
 ## Prerequisites

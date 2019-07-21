@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import '!style-loader!css-loader!../dist/umd/bundle.css'
 import { addParameters, configure } from '@storybook/react'
 
 addParameters({
