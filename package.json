@@ -23,6 +23,7 @@
     "*.js": [
       "yarn lint:fix",
       "yarn test:staged",
+      "npm install",
       "git add"
     ]
   },
