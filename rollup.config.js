@@ -1,9 +1,10 @@
+import autoprefixer from 'autoprefixer'
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
-import sass from 'rollup-plugin-sass'
+import sass from 'node-sass'
+
+import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
-import autoprefixer from 'autoprefixer'
-import postcss from 'postcss'
 
 const dist = 'dist'
 const bundle = 'bundle'
@@ -34,12 +35,18 @@ export default {
     resolve(),
     babel({ exclude: 'node_modules/**' }),
     isProduction && terser(),
-    sass({
-      output: 'dist/styles.css',
-      processor: css =>
-        postcss([autoprefixer])
-          .process(css)
-          .then(result => result.css)
+    postcss({
+      preprocessor: (content, id) =>
+        new Promise((resolve, reject) => {
+          const result = sass.renderSync({ file: id })
+          resolve({ code: result.css.toString() })
+        }),
+      plugins: [autoprefixer],
+      minimize: true,
+      sourceMap: true,
+      extract: true,
+      exec: true,
+      extensions: ['.sass', '.css']
     })
   ]
 }
