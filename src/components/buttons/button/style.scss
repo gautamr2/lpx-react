@@ -5,7 +5,7 @@
   background-color: $brand-color;
   color: $text-on-brand-color;
   min-width: $form-fields-width;
-  font-size: 14px;
+  font-size: $default-font-size;
   border-radius: 3px;
 
   &.small{

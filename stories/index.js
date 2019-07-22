@@ -8,7 +8,8 @@ import {
   Roller,
   Spinner,
   Submit,
-  Verify
+  Verify,
+  Tree
 } from '../src/index'
 
 storiesOf('Loaders', module)
@@ -47,3 +48,5 @@ storiesOf('Buttons', module)
     />
   ))
   .add('Submit', () => <Submit />)
+
+storiesOf('Tree', module).add('Tree', () => <Tree />)

@@ -1,0 +1,41 @@
+.tree {
+  ul,
+  li {
+    position: relative;
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      &:last-child {
+        &::after {
+          height: 8px;
+        }
+      }
+    }
+  }
+
+  li {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -12px;
+    }
+
+    &::before {
+      border-top: 1px solid #ccc;
+      top: 9px;
+      width: 8px;
+      height: 0;
+    }
+
+    &::after {
+      border-left: 1px solid #ccc;
+      height: 100%;
+      width: 0px;
+      top: 2px;
+    }
+  }
+}
