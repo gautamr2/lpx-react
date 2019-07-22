@@ -20,7 +20,7 @@
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:staged": "jest --findRelatedTests",
-    "predeploy": "yarn storybook:build",
+    "predeploy": "yarn build && yarn storybook:build",
     "deploy": "gh-pages -d storybook-static",
     "prepublish": "yarn build"
   },
