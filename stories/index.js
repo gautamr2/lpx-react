@@ -31,23 +31,50 @@ storiesOf('Input', module)
 storiesOf('Forms', module).add('Forms', () => <Verify />)
 storiesOf('Buttons', module)
   .add('Button', () => (
-    <Button
-      text="Reset"
-      onClick={() => {
-        console.log('Hello')
-      }}
-    />
+    <>
+      <Button
+        text="Reset"
+        onClick={() => {
+          console.log('Hello')
+        }}
+      />
+      <div style={{ height: 30 }} />
+      <Button
+        text="Disabled"
+        onClick={() => {
+          console.log('Hello')
+        }}
+        disabled
+      />
+    </>
   ))
   .add('Button props{small}', () => (
-    <Button
-      varient="small"
-      text="Reset"
-      onClick={() => {
-        console.log('Hello')
-      }}
-    />
+    <>
+      <Button
+        varient="small"
+        text="Reset"
+        onClick={() => {
+          console.log('Hello')
+        }}
+      />
+      <div style={{ height: 30 }} />
+      <Button
+        varient="small"
+        text="Disabled"
+        onClick={() => {
+          console.log('Hello')
+        }}
+        disabled
+      />
+    </>
   ))
-  .add('Submit', () => <Submit />)
+  .add('Submit', () => (
+    <>
+      <Submit />
+      <div style={{ height: 30 }} />
+      <Submit disabled />
+    </>
+  ))
 
 storiesOf('Tree', module).add('Tree', () => (
   <div style={{ fontSize: '2rem' }}>
