@@ -1,8 +1,8 @@
 import autoprefixer from 'autoprefixer'
-import babel from 'rollup-plugin-babel'
-import resolve from 'rollup-plugin-node-resolve'
 import sass from 'node-sass'
-
+import babel from 'rollup-plugin-babel'
+import copy from 'rollup-plugin-copy-assets'
+import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 
@@ -47,6 +47,9 @@ export default {
       extract: true,
       exec: true,
       extensions: ['.sass', '.css']
+    }),
+    copy({
+      assets: ['src/assets']
     })
   ]
 }

@@ -1,0 +1,41 @@
+.lpx-tree {
+  ul,
+  li {
+    position: relative;
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      &:last-child {
+        &::after {
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  li {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -.8rem;
+    }
+
+    &::before {
+      border-top: 1px solid #ccc;
+      top: 1.1rem;
+      width: .6rem;
+      height: 0;
+    }
+
+    &::after {
+      border-left: 1px solid #ccc;
+      height: 100%;
+      width: 0px;
+      top: .2rem;
+    }
+  }
+}

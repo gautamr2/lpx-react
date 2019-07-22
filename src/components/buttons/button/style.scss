@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+
+.button {
+  padding: 10px;
+  background-color: $brand-color;
+  color: $text-on-brand-color;
+  min-width: $form-fields-width;
+  font-size: $default-font-size;
+  border-radius: 3px;
+
+  &.small{
+    min-width: 120px;
+  }
+
+  &:disabled {
+    background-color: $brand-color-lighter;
+
+    &:hover {
+      opacity: 1;
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}

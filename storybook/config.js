@@ -4,7 +4,7 @@ import { addParameters, configure } from '@storybook/react'
 
 addParameters({
   options: {
-    name: 'Lookplex',
+    name: 'Look-box',
     url: 'https://github.com/gautamr2/lpx-react',
     isFullscreen: false,
     showPanel: true

@@ -1,19 +1,56 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
-import { Ellipsis, Roller, Spinner } from '../src/index'
-// import { Button } from '@storybook/react/demo'
+import {
+  Button,
+  Checkbox,
+  Ellipsis,
+  Input,
+  Roller,
+  Spinner,
+  Submit,
+  TreeStructure,
+  Verify
+} from '../src/index'
 
 storiesOf('Loaders', module)
   .add('Ellipsis', () => <Ellipsis />)
   .add('Spinner', () => <Spinner />)
   .add('Roller', () => <Roller />)
 
-// storiesOf('Button', module)
-//   .add('with text', () => <Button>Hello Button</Button>)
-//   .add('with emoji', () => (
-//     <Button>
-//       <span role="img" aria-label="so cool">
-//         😀 😎 👍 💯
-//       </span>
-//     </Button>
-//   ))
+storiesOf('Input', module)
+  .add('Input', () => (
+    <Input
+      name="name"
+      placeholder="Enter your name"
+      id="name"
+      onChange={() => {}}
+    />
+  ))
+  .add('Checkbox', () => <Checkbox label="One" />)
+
+storiesOf('Forms', module).add('Forms', () => <Verify />)
+storiesOf('Buttons', module)
+  .add('Button', () => (
+    <Button
+      text="Reset"
+      onClick={() => {
+        console.log('Hello')
+      }}
+    />
+  ))
+  .add('Button props{small}', () => (
+    <Button
+      varient="small"
+      text="Reset"
+      onClick={() => {
+        console.log('Hello')
+      }}
+    />
+  ))
+  .add('Submit', () => <Submit />)
+
+storiesOf('Tree', module).add('Tree', () => (
+  <div style={{ fontSize: '2rem' }}>
+    <TreeStructure />
+  </div>
+))
