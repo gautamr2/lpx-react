@@ -8,8 +8,8 @@ import {
   Roller,
   Spinner,
   Submit,
-  Verify,
-  Tree
+  TreeStructure,
+  Verify
 } from '../src/index'
 
 storiesOf('Loaders', module)
@@ -49,4 +49,8 @@ storiesOf('Buttons', module)
   ))
   .add('Submit', () => <Submit />)
 
-storiesOf('Tree', module).add('Tree', () => <Tree />)
+storiesOf('Tree', module).add('Tree', () => (
+  <div style={{ fontSize: '2rem' }}>
+    <TreeStructure />
+  </div>
+))

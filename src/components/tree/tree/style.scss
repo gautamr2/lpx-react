@@ -1,4 +1,4 @@
-.tree {
+.lpx-tree {
   ul,
   li {
     position: relative;
@@ -10,7 +10,7 @@
     > li {
       &:last-child {
         &::after {
-          height: 8px;
+          height: 1rem;
         }
       }
     }
@@ -21,13 +21,13 @@
     &::after {
       content: "";
       position: absolute;
-      left: -12px;
+      left: -.8rem;
     }
 
     &::before {
       border-top: 1px solid #ccc;
-      top: 9px;
-      width: 8px;
+      top: 1.1rem;
+      width: .6rem;
       height: 0;
     }
 
@@ -35,7 +35,7 @@
       border-left: 1px solid #ccc;
       height: 100%;
       width: 0px;
-      top: 2px;
+      top: .2rem;
     }
   }
 }
