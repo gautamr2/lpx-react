@@ -13,6 +13,18 @@ module.exports = async ({ config, mode }) => {
     include: path.resolve(__dirname, '../')
   })
 
+  // config.module.rules.push({
+  //   test: /\.md$/,
+  //   use: [
+  //     {
+  //       loader: 'markdown-loader',
+  //       options: {
+  //         /* your options here */
+  //       }
+  //     }
+  //   ]
+  // })
+
   // Return the altered config
   return config
 }

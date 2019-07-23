@@ -12,6 +12,8 @@ import {
   Verify
 } from '../src/index'
 
+import MARKDOWN from '../README.md'
+
 storiesOf('Loaders', module)
   .add('Ellipsis', () => <Ellipsis />)
   .add('Spinner', () => <Spinner />)
@@ -28,7 +30,9 @@ storiesOf('Input', module)
   ))
   .add('Checkbox', () => <Checkbox label="One" />)
 
-storiesOf('Forms', module).add('Forms', () => <Verify />)
+storiesOf('Forms', module).add('Forms', () => <Verify />, {
+  notes: { markdown: MARKDOWN }
+})
 storiesOf('Buttons', module)
   .add('Button', () => (
     <>
