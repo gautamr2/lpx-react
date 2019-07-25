@@ -1,19 +1,8 @@
-import { storiesOf } from '@storybook/react'
-import React from 'react'
-import {
-  Button,
-  Checkbox,
-  Ellipsis,
-  Input,
-  Roller,
-  Spinner,
-  Submit,
-  TreeStructure,
-  Verify
-} from '../src/index'
-
-import MARKDOWN from '../README.md'
-
+import { storiesOf } from '@storybook/react';
+import React from 'react';
+import MARKDOWN from '../README.md';
+import { Chip } from '../src/components/chips/Chip';
+import { Button, Checkbox, Ellipsis, Input, Roller, Spinner, Submit, Tag, TreeStructure, Verify } from '../src/index';
 storiesOf('Loaders', module)
   .add('Ellipsis', () => <Ellipsis />)
   .add('Spinner', () => <Spinner />)
@@ -83,5 +72,25 @@ storiesOf('Buttons', module)
 storiesOf('Tree', module).add('Tree', () => (
   <div style={{ fontSize: '2rem' }}>
     <TreeStructure />
+  </div>
+))
+
+storiesOf('Chips', module).add('Chip', () => (
+  <div style={{padding: '160px'}}>
+    <Chip label='EC2' color='#FF0000'/>
+    <div style = {{marginTop: 15}}/>
+    <Chip label='EC2' color='#00ff00' />
+    <div style = {{marginTop: 15}}/>
+    <Chip label='EC2' color='#00f' />
+  </div>
+))
+
+storiesOf('Tags', module).add('Tag', () => (
+  <div style={{padding: '160px'}}>
+    <Tag label='Not Verified' color='#FF0000'/>
+    <div style = {{marginTop: 15}}/>
+    <Tag label='Auto Discovered' color='#99cfe0' />
+    <div style={{ marginTop: 15 }} />
+    <Tag label='Verified' color='#ade6bb' />
   </div>
 ))
