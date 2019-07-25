@@ -77,20 +77,22 @@ storiesOf('Tree', module).add('Tree', () => (
 
 storiesOf('Chips', module).add('Chip', () => (
   <div style={{padding: '160px'}}>
-    <Chip label='EC2' color='#FF0000'/>
+    <Chip label='EC2' color='#FFB6BE'/>
     <div style = {{marginTop: 15}}/>
-    <Chip label='EC2' color='#00ff00' />
+    <Chip label='m4.medium (r)' color='#00f' />
     <div style = {{marginTop: 15}}/>
-    <Chip label='EC2' color='#00f' />
+    <Chip label='us east 1' color='#BAC8FF' />
+    <div style = {{marginTop: 15}}/>
+    <Chip label='EUW3-DataTransfer-Out-Bytes' color='#12b886' />
   </div>
 ))
 
 storiesOf('Tags', module).add('Tag', () => (
   <div style={{padding: '160px'}}>
-    <Tag label='Not Verified' color='#FF0000'/>
+    <Tag label='Not Verified' color='#f03e3e'/>
     <div style = {{marginTop: 15}}/>
     <Tag label='Auto Discovered' color='#99cfe0' />
     <div style={{ marginTop: 15 }} />
-    <Tag label='Verified' color='#ade6bb' />
+    <Tag label='Verified' color='#12b886' />
   </div>
-))
+), { notes: `<Tag label='Verified' color='#ade6bb' />`})
