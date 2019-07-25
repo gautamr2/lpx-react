@@ -20,7 +20,7 @@
     "test:coverage": "jest --coverage",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:staged": "jest --findRelatedTests",
-    "predeploy": "yarn storybook:build",
+    "predeploy": "yarn build && yarn storybook:build",
     "deploy": "gh-pages -d storybook-static",
     "prepublish": "yarn build"
   },
@@ -49,7 +49,8 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/react": "^5.1.9",
+    "@storybook/addon-notes": "v5.2.0-beta.7",
+    "@storybook/react": "v5.2.0-beta.7",
     "autoprefixer": "^9.6.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
