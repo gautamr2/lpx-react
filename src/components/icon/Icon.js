@@ -1,4 +1,4 @@
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import './style.scss';
 
-export const Icon = ({ name }) => (name ? <i className={`fa ${name}`} /> : null)
+export const Icon = ({ name, size }) => (name ? <i className={`fa ${name}`} style={{ fontSize: size}}/> : null)

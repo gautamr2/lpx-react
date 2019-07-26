@@ -1,5 +1,6 @@
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import { Icon } from '../../icon/Icon';
+import './style.scss';
 
 export const Input = ({
   type = 'text',
@@ -7,17 +8,22 @@ export const Input = ({
   value = '',
   onChange,
   placeholder = '',
+  iconName,
+  iconSize,
   required = true
 }) => (
-  <div className="lpx-input">
-    <input
-      type={type}
-      name={name}
-      id={name}
-      value={value}
-      onChange={onChange}
-      required={required}
-    />
-    <label htmlFor={name}>{placeholder}</label>
+  <div className='lpx-input-container'>
+    <Icon name={iconName} size={iconSize} />
+    <div className="lpx-input">
+      <input
+        type={type}
+        name={name}
+        id={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        />
+      <label htmlFor={name}>{placeholder}</label>
+    </div>
   </div>
 )

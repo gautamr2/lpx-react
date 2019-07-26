@@ -10,12 +10,22 @@ storiesOf('Loaders', module)
 
 storiesOf('Input', module)
   .add('Input', () => (
-    <Input
-      name="name"
-      placeholder="Enter your name"
-      id="name"
-      onChange={() => {}}
-    />
+    <div>
+      <Input
+        name="firstName"
+        placeholder="First name"
+        id="firstName"
+        iconName="fa-user-o"
+        onChange={() => { }}
+      />
+      <br />
+      <Input
+        name="lastName"
+        placeholder="Last name"
+        id="lastName"
+        onChange={() => { }}
+      />
+    </div>
   ))
   .add('Checkbox', () => <Checkbox label="One" />)
 
@@ -94,5 +104,7 @@ storiesOf('Tags', module).add('Tag', () => (
     <Tag label='Auto Discovered' color='#99cfe0' />
     <div style={{ marginTop: 15 }} />
     <Tag label='Verified' color='#12b886' />
+    <div style={{ marginTop: 15 }} />
+    <Tag label='Defined' color='#e2d405' />
   </div>
 ), { notes: `<Tag label='Verified' color='#ade6bb' />`})
