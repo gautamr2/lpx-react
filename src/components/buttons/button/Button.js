@@ -11,7 +11,7 @@ export const Button = ({
   disabled = false
 }) => (
   <button
-    className={`button ${varient}`}
+    className={`button ${varient || ''}`}
     type={type}
     value={value}
     onClick={onClick}

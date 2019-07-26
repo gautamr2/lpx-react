@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Input, Submit } from '../..'
-import './style.scss'
+import React, { useState } from 'react';
+import { Input, Submit } from '../..';
+import './style.scss';
 
 export const useInput = initialValue => {
   const [value, setValue] = useState(initialValue)
@@ -45,7 +45,8 @@ export const Verify = () => {
       <Input
         name="firstName"
         id="firstName"
-        placeholder="Enter first name"
+        iconName="fa-user-o"
+        placeholder="Email"
         required
         {...bindFirstName}
       />
@@ -53,7 +54,9 @@ export const Verify = () => {
       <Input
         name="lastName"
         id="lastName"
-        placeholder="Enter last name"
+        placeholder="Mobile No"
+        iconName="fa-mobile"
+        iconSize='1.4em'
         required
         {...bindLastName}
       />

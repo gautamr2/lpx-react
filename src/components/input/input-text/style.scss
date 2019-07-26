@@ -1,46 +1,53 @@
 @import "../../../styles/variables.scss";
 
-.lpx-input {
-  position: relative;
-  width: $form-fields-width;
-  height: 44px;
-  line-height: 44px;
-
-  input {
-    width: 100%;
-    border: 0;
-    outline: 0;
-    padding: 0.3rem 0;
-    border-bottom: 2px solid #d3d3d3;
-    box-shadow: none;
-    color: #111;
-    font-size: $default-font-size;
-
-    &:invalid {
-      outline: 0;
-      //color: #ff2300;
-      //border-color: #ff2300;
-    }
-
-    &:focus,
-    &:valid {
-      border-color: $brand-color;
-
-      ~ label {
-        font-size: .8rem;
-        top: -18px;
-        color: $brand-color;
-      }
-    }
+.lpx-input-container {
+  .fa {
+    margin-right: 5px;
+    color: #888;
   }
 
-  label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #888;
-    transition: 0.1s all ease-in;
-    cursor: text;
+  .lpx-input {
+    position: relative;
+    width: $form-fields-width;
+    height: 44px;
+    line-height: 44px;
+    display: inline-block;
+
+    input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid #d3d3d3;
+      box-shadow: none;
+      color: #666;
+      font-size: $default-font-size;
+
+      &:invalid {
+        outline: 0;
+        //color: #ff2300;
+        //border-color: #ff2300;
+      }
+
+      &:focus {
+        border-color: $brand-color;
+
+        ~ label {
+          font-size: 0.8rem;
+          top: -18px;
+          color: #666;
+        }
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #888;
+      transition: 0.1s all ease-in;
+      cursor: text;
+    }
   }
 }
