@@ -1,11 +1,13 @@
 {
   "name": "lpx-react",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "A React component library",
   "main": "index.js",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "index.js"
   ],
   "scripts": {
     "prebuild": "yarn clean",

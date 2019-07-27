@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, Submit } from '../..';
+import { Input, Submit } from '../../index';
 import './style.scss';
 
 export const useInput = initialValue => {

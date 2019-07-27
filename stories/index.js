@@ -5,7 +5,6 @@ import { Chip } from '../src/components/chips/Chip';
 import { Button, Checkbox, Ellipsis, Input, Roller, Spinner, Submit, Tag, TreeStructure, Verify } from '../src/index';
 storiesOf('Loaders', module)
   .add('Ellipsis', () => <Ellipsis />)
-  .add('Spinner', () => <Spinner />)
   .add('Roller', () => <Roller />)
 
 storiesOf('Input', module)
@@ -23,6 +22,7 @@ storiesOf('Input', module)
         name="lastName"
         placeholder="Last name"
         id="lastName"
+        value='Hello'
         onChange={() => { }}
       />
     </div>
