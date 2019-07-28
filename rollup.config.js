@@ -4,11 +4,10 @@ import babel from 'rollup-plugin-babel'
 import copy from 'rollup-plugin-copy-assets'
 import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
-import { terser } from 'rollup-plugin-terser'
 
 const dist = 'dist'
 const bundle = 'bundle'
-const isProduction = !process.env.ROLLUP_WATCH
+// const isProduction = !process.env.ROLLUP_WATCH
 
 export default {
   input: 'src/index.js',
@@ -34,7 +33,7 @@ export default {
   plugins: [
     resolve(),
     babel({ exclude: 'node_modules/**' }),
-    isProduction && terser(),
+    // isProduction && terser(),
     postcss({
       preprocessor: (content, id) =>
         new Promise((resolve, reject) => {

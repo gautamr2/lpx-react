@@ -3,9 +3,9 @@ import './style.scss'
 
 export const Ellipsis = () => (
   <div className="lds-ellipsis">
-    <div />
-    <div />
-    <div />
-    <div />
+    <div className='shadow'/>
+    <div className='shadow'/>
+    <div className='shadow'/>
+    <div className='shadow'/>
   </div>
 )

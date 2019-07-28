@@ -1,32 +1,38 @@
 @import "../../../styles/variables.scss";
 
 .lpx-input-container {
+  width: 100%;
+  display: inline-block;
+
   .fa {
     margin-right: 5px;
     color: #888;
+    width: 12px;
   }
 
   .lpx-input {
     position: relative;
-    width: $form-fields-width;
     height: 44px;
     line-height: 44px;
     display: inline-block;
+    width: calc(100% - 18px);
 
     input {
       width: 100%;
       border: 0;
       outline: 0;
       padding: 0.3rem 0;
-      border-bottom: 2px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3;
       box-shadow: none;
       color: #666;
       font-size: $default-font-size;
+      transition: all 0.3s linear;
+      background-color: transparent;
 
       &:invalid {
         outline: 0;
         //color: #ff2300;
-        //border-color: #ff2300;
+        border-color: #ff2300;
       }
 
       &:focus {
@@ -36,6 +42,7 @@
           font-size: 0.8rem;
           top: -18px;
           color: #666;
+          font-style: normal;
         }
       }
     }
@@ -48,6 +55,7 @@
       color: #888;
       transition: 0.1s all ease-in;
       cursor: text;
+      font-weight: 100;
     }
   }
 }

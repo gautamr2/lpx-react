@@ -6,9 +6,11 @@
   color: $text-on-brand-color;
   min-width: $form-submit-btn-width;
   font-size: $default-font-size;
-  border-radius: 3px;
+  border-radius: 2px;
+  letter-spacing: .02rem;
+  text-transform: uppercase;
 
-  &.small{
+  &.small {
     min-width: 120px;
   }
 
