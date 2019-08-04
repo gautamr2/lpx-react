@@ -16,6 +16,7 @@ storiesOf('Input', module)
         id="firstName"
         iconName="fa-user-o"
         onChange={() => { }}
+
       />
       <br />
       <Input
@@ -24,6 +25,15 @@ storiesOf('Input', module)
         id="lastName"
         value='Hello'
         onChange={() => { }}
+      />
+      <br/>
+      <Input
+        name="lastName"
+        placeholder="Last name"
+        id="lastName"
+        value='Hello'
+        onChange={() => { }}
+        disabled
       />
     </div>
   ))

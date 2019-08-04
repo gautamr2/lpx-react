@@ -209,9 +209,12 @@
 
   var Icon = function Icon(_ref) {
     var name = _ref.name,
-        size = _ref.size;
+        size = _ref.size,
+        clickable = _ref.clickable,
+        onClick = _ref.onClick;
     return name ? React__default.createElement("i", {
-      className: "fa ".concat(name),
+      onClick: onClick,
+      className: "fa fa-".concat(name, " ").concat(onClick || clickable ? 'clickable' : ''),
       style: {
         fontSize: size
       }
@@ -250,7 +253,9 @@
         iconName = _ref.iconName,
         iconSize = _ref.iconSize,
         _ref$required = _ref.required,
-        required = _ref$required === void 0 ? true : _ref$required;
+        required = _ref$required === void 0 ? true : _ref$required,
+        _ref$disabled = _ref.disabled,
+        disabled = _ref$disabled === void 0 ? false : _ref$disabled;
     return React__default.createElement("div", {
       className: "lpx-input-container"
     }, React__default.createElement(Icon, {
@@ -264,7 +269,8 @@
       id: name,
       value: value,
       onChange: onChange,
-      required: required
+      required: required,
+      disabled: disabled
     }), React__default.createElement("label", {
       htmlFor: name
     }, placeholder)));

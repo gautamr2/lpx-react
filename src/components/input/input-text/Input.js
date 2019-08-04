@@ -10,7 +10,8 @@ export const Input = ({
   placeholder = '',
   iconName,
   iconSize,
-  required = true
+  required = true,
+  disabled = false,
 }) => (
   <div className='lpx-input-container'>
     <Icon name={iconName} size={iconSize} />
@@ -22,6 +23,7 @@ export const Input = ({
         value={value}
         onChange={onChange}
         required={required}
+        disabled={disabled}
         />
       <label htmlFor={name}>{placeholder}</label>
     </div>
